@@ -13,19 +13,19 @@ class Pricelist extends CI_Controller
 
     public function index()
     {
-        $this->db->select('*')->from('kategori');
-        $this->db->order_by('nama_kategori', 'ASC');
-        $kategori = $this->db->get()->result_array();
+        $this->db->select('*')->from('kategori_menu');
+        $this->db->order_by('nama_menu', 'ASC');
+        $menu = $this->db->get()->result_array();
 
         $this->db->from('pricelist');
-        $this->db->join('kategori', 'pricelist.id_kategori=kategori.id_kategori', 'left');
-        $this->db->order_by('id_list', 'DESC');
+        $this->db->join('kategori_menu', 'pricelist.id_menu=kategori_menu.id_menu', 'left');
+        $this->db->order_by('foto', 'DESC');
         $servis = $this->db->get()->result_array();
         $data = array(
             'servis' => $servis,
-            'kategori' => $kategori,
+            'menu' =>  $menu,
             'judul_title' => "Tambah Data Servis|Admin CMS"
-        );
+        ); 
         $this->template->load('admin/template', 'admin/pricelist', array_merge($data));
     }
 
@@ -69,7 +69,8 @@ class Pricelist extends CI_Controller
             'judul' => $this->input->post('judul'),
             'keterangan' => $this->input->post('keterangan'),
             'foto' => $namafoto,
-            'id_kategori' => $this->input->post('id_kategori')
+            'id_menu' => $this->input->post('id_menu'),
+            'harga' => $this->input->post('harga')
 
         );
         $this->db->insert('pricelist', $data);
@@ -81,10 +82,10 @@ class Pricelist extends CI_Controller
         ');
         redirect('admin/pricelist/');
     }
-    public function update_konten()
+    public function update_list()
     {
         $namafoto = $this->input->post('nama_foto');
-        $config['upload_path'] = realpath('assets/upload/konten/');
+        $config['upload_path'] = realpath('assets/upload/pricelist/');
         $config['max_size'] = 500 * 1024; //500 * 1024 * 1024; //3Mb; 0=unlimited
         $config['allowed_types'] = '*';
         $config['overwrite'] = true;
@@ -108,7 +109,8 @@ class Pricelist extends CI_Controller
         $data = array(
             'judul' => $this->input->post('judul'),
             'keterangan' => $this->input->post('keterangan'),
-            'id_kategori' => $this->input->post('id_kategori')
+            'id_menu' => $this->input->post('id_menu'),
+            'harga' => $this->input->post('harga')
 
         );
         $where = array(

@@ -17,11 +17,11 @@
             <div class="modal-body">
                 <form action="<?= base_url('admin/pricelist/simpan') ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3 mt-4">
-                        <label class="form-label">Kategori</label>
-                        <select name="id_kategori" class="form-select">
-                            <?php foreach ($kategori as $u) { ?>
-                                <option value="<?= $u['id_kategori']; ?>">
-                                    <?= $u['nama_kategori']; ?>
+                        <label class="form-label">Kategori Menu</label>
+                        <select name="id_menu" class="form-select">
+                            <?php foreach ($menu as $dd) { ?>
+                                <option value="<?= $dd['id_menu']; ?>">
+                                    <?= $dd['nama_menu']; ?>
                                 </option>
                             <?php } ?>
                         </select>
@@ -34,6 +34,10 @@
                         <label class="form-label">Keterangan</label>
                         <textarea class="form-control" rows="10" cols="80" placeholder="" style="height: 150px;"
                             name="keterangan"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Harga</label>
+                        <input type="text" class="form-control" name="harga">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">foto</label>
@@ -54,7 +58,9 @@
             <th scope="col">#</th>
             <th scope="col">Judul</th>
             <th scope="col">Keterangan</th>
-            <th scope="col">Kategori Konten</th>
+            <th scope="col">Kategori Menu</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Foto</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -72,7 +78,10 @@
                     <?= $qq['keterangan']; ?>
                 </td>
                 <td>
-                    <?= $qq['nama_kategori']; ?>
+                    <?= $qq['nama_menu']; ?>
+                </td>
+                <td>
+                    Rp<?= $qq['harga']; ?>
                 </td>
                 <td>
                     <a href="<?= base_url('assets/upload/pricelist/' . $qq['foto']) ?>" target="_blank">
@@ -112,16 +121,16 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="<?= base_url('admin/pricelist/update_konten') ?>" method="post"
+                                    <form action="<?= base_url('admin/pricelist/update_list') ?>" method="post"
                                         enctype="multipart/form-data">
                                         <input type="hidden" value="<?= $qq['foto']; ?>" name="nama_foto">
                                         <div class="mb-3 mt-4">
-                                            <label class="form-label">Kategori</label>
-                                            <select name="id_kategori" class="form-select">
-                                                <?php foreach ($kategori as $bb) { ?>
-                                                    <option <?php if ($bb['id_kategori'] == $bb['id_kategori']) {
+                                            <label class="form-label">Kategori Menu</label>
+                                            <select name="id_menu" class="form-select">
+                                                <?php foreach ($menu as $tt) { ?>
+                                                    <option <?php if ($tt['id_menu'] == $qq['id_menu']) {
                                                         echo "selected";
-                                                    } ?> value="<?= $bb['id_kategori']; ?>"><?= $bb['nama_kategori']; ?>
+                                                    } ?> value="<?= $tt['id_menu']; ?>"><?= $tt['nama_menu']; ?>
                                                     </option>
                                                 <?php } ?>
                                             </select>
@@ -135,6 +144,10 @@
                                             <label class="form-label">Keterangan</label>
                                             <textarea class="form-control" placeholder="" style="height: 150px;"
                                                 name="keterangan"> <?= $qq['keterangan']; ?></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Harga</label>
+                                            <input type="text" class="form-control" name="harga"   value=" <?= $qq['harga']; ?>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">foto</label>

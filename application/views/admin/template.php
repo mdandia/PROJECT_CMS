@@ -10,7 +10,12 @@
     <link rel="shortcut icon" type="image/png"
         href="<?= base_url('assets/admin/') ?>src/assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="<?= base_url('assets/admin/') ?>src/assets/css/styles.min.css" />
-    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <!-- Place the first <script> tag in your HTML's <head> -->
+    <script src=" https://cdn.tiny.cloud/1/tgkurhpa79oyqfupbb0e5k9w76eh5oivcjj0sf5c1dmrqba7/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin">
+        </script>
 </head>
 
 <body>
@@ -65,7 +70,15 @@
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
-                                <span class="hide-menu">Kategori barang</span>
+                                <span class="hide-menu">Kategori Blog</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item" <?= activate_menu('menu'); ?>>
+                            <a class="sidebar-link" href="<?= base_url('admin/menu/') ?>" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-article"></i>
+                                </span>
+                                <span class="hide-menu">Kategori Menu</span>
                             </a>
                         </li>
                         <li class="sidebar-item" <?= activate_menu('konten'); ?>>
@@ -73,7 +86,23 @@
                                 <span>
                                     <i class="ti ti-cards"></i>
                                 </span>
-                                <span class="hide-menu">Konten Barang</span>
+                                <span class="hide-menu">Konten Blog</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item" <?= activate_menu('reservasi'); ?>>
+                            <a class="sidebar-link" href="<?= base_url('admin/reservasiad') ?>" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-article"></i>
+                                </span>
+                                <span class="hide-menu">Data Reservasi</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="<?= base_url('admin/pricelist') ?>" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-alert-circle"></i>
+                                </span>
+                                <span class="hide-menu">PriceList Menu</span>
                             </a>
                         </li>
                         <li class="sidebar-item" <?= activate_menu('konfigurasi'); ?>>
@@ -92,14 +121,15 @@
                                 <span class="hide-menu">Caraousel</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="<?= base_url('admin/pricelist') ?>" aria-expanded="false">
+                        <li class="sidebar-item" <?= activate_menu('gallery'); ?>>
+                            <a class="sidebar-link" href="<?= base_url('admin/gallery') ?>" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-alert-circle"></i>
+                                    <i class="ti ti-album"></i>
                                 </span>
-                                <span class="hide-menu">PriceList</span>
+                                <span class="hide-menu">Gallery</span>
                             </a>
                         </li>
+
 
 
                 </nav>
@@ -165,12 +195,22 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
     <script>
-        new DataTable('#coba');
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
+    <script>
+        new DataTable('#example');
     </script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/js/sidebarmenu.js"></script>

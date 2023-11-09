@@ -6,7 +6,6 @@
 <button type="button" class="btn btn-outline-dark m-1" data-bs-toggle="modal" data-bs-target="#produk">
     Tambah Produk
 </button>
-
 <div class="modal fade" id="produk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -20,7 +19,9 @@
                         <label class="form-label">Kategori</label>
                         <select name="id_kategori" class="form-select">
                             <?php foreach ($kategori as $u) { ?>
-                                <option value="<?= $u['id_kategori']; ?>"><?= $u['nama_kategori']; ?></option>
+                                <option value="<?= $u['id_kategori']; ?>">
+                                    <?= $u['nama_kategori']; ?>
+                                </option>
                             <?php } ?>
                         </select>
                     </div>
@@ -30,11 +31,11 @@
                     </div>
                     <div class="mb-3 mt-4">
                         <label class="form-label">Keterangan</label>
-                        <textarea class="form-control" rows="10" cols="80" placeholder=""
+                        <textarea id="textarea" class="form-control" rows="10" cols="80" placeholder=""
                             style="height: 150px;" name="keterangan"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">foto</label>
+                        <label class="form-label">Foto</label>
                         <input type="file" class="form-control" name="foto" accept="image/png, image/gif, image/jpeg">
                     </div>
                     <div class="modal-footer">
@@ -46,7 +47,7 @@
         </div>
     </div>
 </div>
-<table class="table table-hover" style="width:100%">
+<table id="example" class="table table-striped" style="width:100%">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -72,7 +73,28 @@
                     <?= $tampil['nama_kategori']; ?>
                 </td>
                 <td>
-                    <?= $tampil['keterangan']; ?>
+                    <?= mb_substr($tampil['keterangan'], 0, 100, 'UTF-8'); ?>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#ket<?= $no; ?>" style="color: blue;">Baca
+                        Selengkapnya</a>
+                    <div class="modal fade" id="ket<?= $no; ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Keterangan Lengkap</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <?= $tampil['keterangan']; ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Oke</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </td>
                 <td>
                     <?= $tampil['tanggal']; ?>
@@ -125,7 +147,7 @@
                                             <label class="form-label">Kategori</label>
                                             <select name="id_kategori" class="form-select">
                                                 <?php foreach ($kategori as $uu) { ?>
-                                                    <option <?php if ($uu['id_kategori'] == $u['id_kategori']) {
+                                                    <option <?php if ($uu['id_kategori'] == $tampil['id_kategori']) {
                                                         echo "selected";
                                                     } ?> value="<?= $uu['id_kategori']; ?>"><?= $uu['nama_kategori']; ?>
                                                     </option>
@@ -139,7 +161,7 @@
                                         </div>
                                         <div class="mb-3 mt-4">
                                             <label class="form-label">Keterangan</label>
-                                            <textarea class="form-control" placeholder=""
+                                            <textarea id="textarea" class="form-control" placeholder=""
                                                 style="height: 150px;"
                                                 name="keterangan"> <?= $tampil['keterangan']; ?></textarea>
                                         </div>

@@ -52,6 +52,7 @@ class Konten extends CI_Controller
             print_r($error);
         } else {
             $data = array('upload' => $this->upload->data());
+            
         }
         $this->db->from('konten');
         $this->db->where('judul', $this->input->post('judul'));
@@ -60,7 +61,7 @@ class Konten extends CI_Controller
             $this->session->set_flashdata('alert', '
 		<div class="alert alert-danger alert-dismissible fade show" role="alert">
 			<i class="fa fa-exclamation-circle me-2"></i>
-			nama kategori sudah ada
+			Judul Sudah Ada
 			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 		');
@@ -92,6 +93,8 @@ class Konten extends CI_Controller
         $config['max_size'] = 500 * 1024; //500 * 1024 * 1024; //3Mb; 0=unlimited
         $config['allowed_types'] = '*';
         $config['overwrite'] = true;
+        $config['width']= 644;
+        $config['height']= 362;
         $config['file_name'] = $namafoto;
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
@@ -108,6 +111,7 @@ class Konten extends CI_Controller
             print_r($error);
         } else {
             $data = array('upload' => $this->upload->data());
+            
         }
         $data = array(
             'judul' => $this->input->post('judul'),

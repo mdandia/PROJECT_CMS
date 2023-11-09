@@ -57,7 +57,7 @@ class Kategori extends CI_Controller
 		);
 		$where = array(
 			'id_kategori' => $this->input->post('id_kategori')
-		);
+		); 
 		$this->db->update('kategori', $data, $where);
 		$this->session->set_flashdata('alert', '<div class="alert alert-primary alert-dismissible fade show" role="alert">
 		<i class="fa fa-exclamation-circle me-2"></i>
