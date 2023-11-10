@@ -28,8 +28,8 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="<?= base_url(); ?>" class="text-nowrap logo-img">
-                        <img src="<?= base_url('assets/admin/') ?>src/assets/images/logos/cms.png" width="150px" alt=""
-                            style="margin-top: 20px;" />
+                        <img src="<?= base_url('assets/admin/') ?>src/assets/images/logos/logo2.png" alt=""
+                            style="margin-top: 20px;height: 100px;" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -65,10 +65,40 @@
                                 </a>
                             </li>
                         <?php } ?>
-                        <li class="sidebar-item" <?= activate_menu('kategori'); ?>>
+                        <div class="dropdown">
+                            <li class="sidebar-item" type="button" <?= activate_menu('kategori'); ?>
+                                data-bs-toggle="dropdown">
+                                <a class="sidebar-link" aria-expanded="false">
+                                    <span>
+                                        <i class="ti ti-list"></i>
+                                    </span>
+                                    <span class="hide-menu">Kategori </span>
+                                </a>
+                            </li>
+                            <ul class="dropdown-menu">
+                                <li class="sidebar-item" <?= activate_menu('kategori'); ?>>
+                                    <a class="sidebar-link" href="<?= base_url('admin/kategori/') ?>"
+                                        aria-expanded="false">
+                                        <span>
+                                            <i class="ti ti-point"></i>
+                                        </span>
+                                        <span class="hide-menu">Kategori Blog</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item" <?= activate_menu('menu'); ?>>
+                                    <a class="sidebar-link" href="<?= base_url('admin/menu/') ?>" aria-expanded="false">
+                                        <span>
+                                            <i class="ti ti-point"></i>
+                                        </span>
+                                        <span class="hide-menu">Kategori Menu</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <li class="sidebar-item" <?= activate_menu('kategori'); ?>>
                             <a class="sidebar-link" href="<?= base_url('admin/kategori/') ?>" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-article"></i>
+                                    <i class="ti ti-list"></i>
                                 </span>
                                 <span class="hide-menu">Kategori Blog</span>
                             </a>
@@ -80,7 +110,7 @@
                                 </span>
                                 <span class="hide-menu">Kategori Menu</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="sidebar-item" <?= activate_menu('konten'); ?>>
                             <a class="sidebar-link" href="<?= base_url('admin/konten') ?>" aria-expanded="false">
                                 <span>
@@ -92,7 +122,7 @@
                         <li class="sidebar-item" <?= activate_menu('reservasi'); ?>>
                             <a class="sidebar-link" href="<?= base_url('admin/reservasiad') ?>" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-article"></i>
+                                    <i class="ti ti-clipboard-text"></i>
                                 </span>
                                 <span class="hide-menu">Data Reservasi</span>
                             </a>
@@ -100,7 +130,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="<?= base_url('admin/pricelist') ?>" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-alert-circle"></i>
+                                    <i class="ti ti-receipt"></i>
                                 </span>
                                 <span class="hide-menu">PriceList Menu</span>
                             </a>
@@ -124,7 +154,7 @@
                         <li class="sidebar-item" <?= activate_menu('gallery'); ?>>
                             <a class="sidebar-link" href="<?= base_url('admin/gallery') ?>" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-album"></i>
+                                    <i class="ti ti-photo-plus"></i>
                                 </span>
                                 <span class="hide-menu">Gallery</span>
                             </a>
@@ -158,7 +188,9 @@
                     </ul>
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                            <li class="nav-item dropdown">
+                            <a href="<?= base_url('admin/auth/logout') ?>" onclick="Anda yakin logout?"
+                                class="btn btn-danger mx-3 mt-2 d-block">Logout</a>
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="<?= base_url('assets/admin/') ?>src/assets/images/profile/user-1.jpg"
@@ -172,11 +204,10 @@
                                             <i class="ti ti-user fs-6"></i>
                                             <p class="mb-0 fs-3">My Profile</p>
                                         </a>
-                                        <a href="<?= base_url('admin/auth/logout') ?>" onclick="Anda yakin logout?"
-                                            class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                        
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </nav>

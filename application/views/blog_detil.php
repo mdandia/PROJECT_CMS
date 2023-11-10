@@ -101,99 +101,30 @@
                     <!-- Most Popular -->
                     <div class="popular">
                         <h4 class="txt33 p-b-35 p-t-58">
-                            Most popular
+                            Most Rencent
                         </h4>
 
                         <ul>
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="images/blog-11.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
+                            <?php foreach ($rencent as $baru) { ?>
+                                <li class="flex-w m-b-25">
+                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+                                        <a href="<?= base_url('blog/artikel/' . $baru['slug']) ?>">
+                                            <img src="<?= base_url('assets/upload/konten/' . $baru['foto']) ?>"
+                                                alt="IMG-BLOG">
+                                        </a>
+                                    </div>
 
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Best Places for Wine
-                                    </a>
+                                    <div class="size28">
+                                        <a href="#" class="dis-block txt28 m-b-8">
+                                            <?= $baru['judul']; ?>
+                                        </a>
 
-                                    <span class="txt14">
-                                        3 days ago
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="images/blog-12.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Eggs and Cheese
-                                    </a>
-
-                                    <span class="txt14">
-                                        July 2, 2017
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="images/blog-13.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Style the Wedding Party
-                                    </a>
-
-                                    <span class="txt14">
-                                        May 28, 2017
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="images/blog-14.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Cooking recipe Delicious
-                                    </a>
-
-                                    <span class="txt14">
-                                        May 25, 2017
-                                    </span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="images/blog-15.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Pizza is prepared fresh
-                                    </a>
-
-                                    <span class="txt14">
-                                        May 2, 2017
-                                    </span>
-                                </div>
-                            </li>
+                                        <span class="txt14">
+                                            <?= $baru['tanggal']; ?>
+                                        </span>
+                                    </div>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>

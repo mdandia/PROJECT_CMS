@@ -108,7 +108,11 @@ class Blog extends CI_Controller
         $kategori = $this->db->get()->result_array();
         $this->db->from('gallery');
 		$gallery = $this->db->limit(8)->get()->result_array();
-        
+        $this->db->from('konten');
+		$this->db->join('kategori', 'konten.id_kategori=kategori.id_kategori', 'left');
+		$this->db->join('user', 'konten.username=user.username', 'left');
+		$this->db->order_by('tanggal', 'DESC');
+		$rencent = $this->db->limit(4)->get()->result_array();
         $this->db->from('konten');
         $this->db->join('kategori', 'konten.id_kategori=kategori.id_kategori', 'left');
         $this->db->join('user', 'konten.username=user.username', 'left');
@@ -120,6 +124,7 @@ class Blog extends CI_Controller
             'kategori' => $kategori,
             'gallery' => $gallery,
             'caraousel' => $caraousel,
+            'rencent' => $rencent,
             'konten' => $konten
         );
         $this->template->load('templatead','blog_detil', array_merge($data));

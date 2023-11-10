@@ -27,7 +27,7 @@ class Gallery  extends CI_Controller
 
         $config['base_url'] = 'http://[::1]/cemes/gallery/index/';
         $config['total_rows'] = $this->gallery_model->semuafoto();
-        $config['per_page'] = 6     ;
+        $config['per_page'] = 6;
 
         $config['first_link'] = 'First';
         $config['last_link'] = 'Last';

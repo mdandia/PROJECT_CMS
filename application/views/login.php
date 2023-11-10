@@ -24,11 +24,11 @@
                         <div class="card mb-0">
                             <div class="card-body">
                                 <a class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                    <img src="<?= base_url('assets/admin/') ?>src/assets/images/logos/cms.png"
+                                    <img src="<?= base_url('assets/admin/') ?>src/assets/images/logos/logo2.png"
                                         width="280" alt="">
                                 </a>
                                 <form action="<?= base_url('admin/auth/login') ?>" method="post">
-                                    <p class="text-center">Your Admin CMS</p>
+                                    <p class="text-center">Your Admin Restaurant</p>
                                     <div class="mb-3">
                                         <label class="form-label">Username</label>
                                         <input type="text" class="form-control" placeholder="Masukan Username"
@@ -39,7 +39,7 @@
                                         <input type="password" class="form-control" placeholder="Masukkan Password"
                                             name="password">
                                     </div>
-                                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Login</button>
+                                    <button type="submit" class="btn btn-danger py-3 w-100 mb-4">Login</button>
                                 </form>
                                 <div id='myalert'>
                                     <?= $this->session->flashdata('alert', true); ?>

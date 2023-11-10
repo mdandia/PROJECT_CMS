@@ -17,6 +17,6 @@
         align-items: center;
     }
 </style>
-<h1 class="animated-text">BUDENG TRI KABUL ANTOK GUN
+<h1 class="animated-text">Welcome
     <?= $this->session->userdata['nama']; ?>
 </h1>
