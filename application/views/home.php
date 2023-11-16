@@ -138,7 +138,7 @@
 
         <div class="row">
             <?php foreach ($kategmen as $men) { ?>
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
                         <img src="<?= base_url('assets/upload/kategori/' . $men['foto_menu']) ?>" alt="IMG-MENU">
 

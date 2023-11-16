@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js">
 <div id='myalert'>
     <?= $this->session->flashdata('alert', true); ?>
 </div>
@@ -47,16 +48,17 @@
         </div>
     </div>
 </div>
-<table id="example" class="table table-striped" style="width:100%">
+<table id="example" class="table table-hover" style="width:100%">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Judul</th>
-            <th scope="col">Kategori Konten</th>
-            <th scope="col">Keterangan</th>
-            <th scope="col">Tanggal</th>
-            <th scope="col">Kreator</th>
-            <th scope="col">Aksi</th>
+            <th>#</th>
+            <th>Judul</th>
+            <th>Kategori Konten</th>
+            <th>Keterangan</th>
+            <th>Tanggal</th>
+            <th>Kreator</th>
+            <th>Foto</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -185,4 +187,15 @@
             <?php $no++;
         } ?>
     </tbody>
+    <tfoot>
+        <tr>
+            <th>#</th>
+            <th>Judul</th>
+            <th>Kategori Konten</th>
+            <th>Keterangan</th>
+            <th>Tanggal</th>
+            <th>Kreator</th>
+            <th>Aksi</th>
+        </tr>
+    </tfoot>
 </table>

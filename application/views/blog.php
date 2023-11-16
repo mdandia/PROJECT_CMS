@@ -86,7 +86,7 @@
                     <form action="<?= base_url('blog/search/') ?>" method="post">
                         <div class="search-sidebar2 size12 bo2 pos-relative">
                             <input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="keyword"
-                                placeholder="Search" autocomplete="off" autofocus>
+                                placeholder="Search" autocomplete="off">
                             <button type="submit" class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
                         </div>
                     </form>

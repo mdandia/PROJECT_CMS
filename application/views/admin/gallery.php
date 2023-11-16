@@ -20,19 +20,21 @@
             </div>
         </form>
     </div>
+</div>
+<div class="row">
     <?php foreach ($galer as $hh) { ?>
-        <div class="col-md-6 col-lg-4 mb-3">
-            <div class="card h-100">
-                <img class="card-img-top" src="<?= base_url('assets/upload/gallery/' . $hh['foto']) ?>">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="<?= base_url('assets/upload/gallery/' . $hh['foto']) ?>" width="288px" height="288px" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">
                         <?= $hh['judul'] ?>
                     </h5>
-                    <a href="<?= base_url('admin/gallery/hapus_foto/' . $hh['foto']); ?>" class="btn btn-outline-danger"
+                    <a hhref="<?= base_url('admin/gallery/hapus_foto/' . $hh['foto']); ?>" class="btn btn-outline-danger"
                         onclick="return confirm('yakin deck, mau hapus?')">
-                        <span class="tf-icons bx bx-trash">Hapus</span>
-                    </a>
+                        <span class="tf-icons bx bx-trash">Hapus</span></a>
                 </div>
             </div>
         </div>
     <?php } ?>
+</div>

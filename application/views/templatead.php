@@ -52,7 +52,9 @@
                     <!-- Logo -->
 
                     <a href="<?= base_url('') ?>">
-                        <h2 class="logo_font"> <?= $konfig->judul_website; ?></h2>
+                        <h2 class="logo_font">
+                            <?= $konfig->judul_website; ?>
+                        </h2>
                     </a>
 
                     <!-- Menu -->
@@ -86,9 +88,13 @@
 
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
-                        <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->instagram; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->facebook; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->tiktok; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa-brands fa-tiktok m-l-18"></i>
+                            </i></a>
 
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
@@ -194,7 +200,7 @@
 
                     <ul>
                         <li class="txt14">
-                            09:30 AM – 11:00 PM
+                            <?= $konfig->jam_buka; ?>
                         </li>
 
                         <li class="txt14">
@@ -206,48 +212,63 @@
                 <div class="col-sm-6 col-md-4 p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-33">
-                        Latest twitter
+                        Link
                     </h4>
 
                     <div class="m-b-25">
                         <span class="fs-13 color2 m-r-5">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </span>
-                        <a href="#" class="txt15">
-                            @colorlib
+                        <a href="<?= base_url(''); ?>" class="txt18">
+                            Home
                         </a>
-
-                        <p class="txt14 m-b-18">
-                            Activello is a good option. It has a slider built into that displays the featured image in
-                            the slider.
-                            <a href="#" class="txt15">
-                                https://buff.ly/2zaSfAQ
-                            </a>
-                        </p>
-
-                        <span class="txt16">
-                            21 Dec 2017
-                        </span>
                     </div>
-
-                    <div>
+                    <div class="m-b-25">
                         <span class="fs-13 color2 m-r-5">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </span>
-                        <a href="#" class="txt15">
-                            @colorlib
+                        <a href="<?= base_url('reservasi/'); ?>" class="txt18">
+                            Reservasi
+                    </div>
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                        <a href="<?= base_url('menu/'); ?>" class="txt18">
+                            Menu
                         </a>
-
-                        <p class="txt14 m-b-18">
-                            Activello is a good option. It has a slider built into that displays
-                            <a href="#" class="txt15">
-                                https://buff.ly/2zaSfAQ
-                            </a>
-                        </p>
-
-                        <span class="txt16">
-                            21 Dec 2017
+                    </div>
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </span>
+                        <a href="<?= base_url('about/'); ?>" class="txt18">
+                            About
+                        </a>
+                    </div>
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                        <a href="<?= base_url('blog/'); ?>" class="txt18">
+                            Blog
+                        </a>
+                    </div>
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                        <a href="<?= base_url('gallery/'); ?>" class="txt18">
+                            Gallery
+                        </a>
+                    </div>
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                        <a href="<?= base_url('kontak/'); ?>" class="txt18">
+                            Contact
+                        </a>
                     </div>
                 </div>
 
@@ -278,14 +299,19 @@
             <div class="container">
                 <div class="flex-sb-m flex-w p-t-22 p-b-22">
                     <div class="p-t-5 p-b-5">
-                        <a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                        <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
-                        <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->instagram; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->facebook; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                        <a href="<?= $konfig->tiktok; ?>" target="_blank" class="fs-15 c-white"><i
+                                class="fa-brands fa-tiktok m-l-18"></i>
+                            </i></a>
                     </div>
 
                     <div class="txt17 p-r-20 p-t-5 p-b-5">
-                        Copyright &copy; 2018 All rights reserved | This template is made with <i
-                            class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Copyright &copy; 2023 All rights reserved | This Website is made with <i
+                            class="fa fa-heart"></i> by
+                        <?= $konfig->judul_website; ?>
                     </div>
                 </div>
             </div>
@@ -326,6 +352,7 @@
 
     <!--===============================================================================================-->
     <script type="text/javascript" src="<?= base_url('assets/publik/') ?>vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/c1847bbd37.js" crossorigin="anonymous"></script>
     <!--===============================================================================================-->
     <script type="text/javascript"
         src="<?= base_url('assets/publik/') ?>vendor/animsition/js/animsition.min.js"></script>

@@ -10,10 +10,10 @@
     <link rel="shortcut icon" type="image/png"
         href="<?= base_url('assets/admin/') ?>src/assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="<?= base_url('assets/admin/') ?>src/assets/css/styles.min.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js">
     <!-- Place the first <script> tag in your HTML's <head> -->
-    <script src=" https://cdn.tiny.cloud/1/tgkurhpa79oyqfupbb0e5k9w76eh5oivcjj0sf5c1dmrqba7/tinymce/6/tinymce.min.js"
+    <script src=" https://cdn.tiny.cloud/1/aq37vou6o6fl7r2lfo92721t18z6173r03hevnh6qpu52i0f/tinymce/6/tinymce.min.js"
         referrerpolicy="origin">
         </script>
 </head>
@@ -66,8 +66,7 @@
                             </li>
                         <?php } ?>
                         <div class="dropdown">
-                            <li class="sidebar-item" type="button" <?= activate_menu('kategori'); ?>
-                                data-bs-toggle="dropdown">
+                            <li class="sidebar-item" type="button" data-bs-toggle="dropdown">
                                 <a class="sidebar-link" aria-expanded="false">
                                     <span>
                                         <i class="ti ti-list"></i>
@@ -95,22 +94,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- <li class="sidebar-item" <?= activate_menu('kategori'); ?>>
-                            <a class="sidebar-link" href="<?= base_url('admin/kategori/') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-list"></i>
-                                </span>
-                                <span class="hide-menu">Kategori Blog</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item" <?= activate_menu('menu'); ?>>
-                            <a class="sidebar-link" href="<?= base_url('admin/menu/') ?>" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Kategori Menu</span>
-                            </a>
-                        </li> -->
+
                         <li class="sidebar-item" <?= activate_menu('konten'); ?>>
                             <a class="sidebar-link" href="<?= base_url('admin/konten') ?>" aria-expanded="false">
                                 <span>
@@ -159,9 +143,6 @@
                                 <span class="hide-menu">Gallery</span>
                             </a>
                         </li>
-
-
-
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -236,12 +217,6 @@
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
     </script>
-    <script>
-        new DataTable('#example');
-    </script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('assets/admin/') ?>src/assets/js/sidebarmenu.js"></script>
@@ -256,6 +231,14 @@
     <script>
         $('#myalert').delay('slow').slideDown('slow').delay(4000).slideUp(600);
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 </body>
 
 </html>

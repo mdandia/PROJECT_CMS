@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js">
 <div id='myalert'>
     <?= $this->session->flashdata('alert', true); ?>
 </div>
@@ -46,14 +47,14 @@
         </div>
     </div>
 </div>
-<table id="coba" class="table table-hover" style="width:100%">
+<table id="example" class="table table-hover" style="width:100%">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Username</th>
-            <th scope="col">Nama Lengkap</th>
-            <th scope="col">Level</th>
-            <th scope="col">Aksi</th>
+            <th>#</th>
+            <th>Username</th>
+            <th>Nama Lengkap</th>
+            <th>Level</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>

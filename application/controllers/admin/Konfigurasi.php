@@ -47,14 +47,15 @@ class Konfigurasi extends CI_Controller
 		}
 		$data = array(
 			'judul_website' => $this->input->post('judul_website'),
-			'judul_profil' => $this->input->post('judul_profil'),
 			'profil_website' => $this->input->post('profil_website'),
 			'instagram' => $this->input->post('instagram'),
 			'facebook' => $this->input->post('facebook'),
 			'email' => $this->input->post('email'),
+			'tiktok' => $this->input->post('tiktok'),
 			'alamat' => $this->input->post('alamat'),
 			'no_wa' => $this->input->post('no_wa'),
 			'id_yt' => $this->input->post('id_yt'),
+			'jam_buka' => $this->input->post('jam_buka'),
 			'foto' => $this->input->post('nama_foto')
 		);
 		$where = array(

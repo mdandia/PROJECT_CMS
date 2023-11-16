@@ -12,10 +12,6 @@
                 <label class="form-label">Judul Website</label>
                 <input type="text" class="form-control" name="judul_website" value="<?= $konfig->judul_website; ?>">
             </div>
-            <div class="mb-3 mt-4">
-                <label class="form-label">Judul Profil</label>
-                <input type="text" class="form-control" name="judul_profil" value="<?= $konfig->judul_profil; ?>">
-            </div>
             <div class="mb-3">
                 <label class="form-label">Profile Website</label>
                 <textarea class="form-control" id="konten" placeholder="" style="height: 150px;"
@@ -34,7 +30,11 @@
                 <input type="email" class="form-control" name="email" value="<?= $konfig->email; ?>">
             </div>
             <div class="mb-3">
-                <label class="form-label">Alamat</label>
+                <label class="form-label">Tik Tok</label>
+                <input type="text" class="form-control" name="tiktok" value="<?= $konfig->tiktok; ?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Alamat (ISI DENGAN LENGKAP)</label>
                 <input type="text" class="form-control" name="alamat" value="<?= $konfig->alamat; ?>">
             </div>
             <div class="mb-3">
@@ -44,6 +44,10 @@
             <div class="mb-3">
                 <label class="form-label">ID Link Youtube</label>
                 <input type="text" class="form-control" name="id_yt" value="<?= $konfig->id_yt; ?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Jam Buka</label>
+                <input type="text" class="form-control" name="jam_buka" value="<?= $konfig->jam_buka; ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Foto</label>

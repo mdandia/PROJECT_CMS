@@ -1,4 +1,5 @@
-<table class="table table-hover" style="width:100%">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js">
+<table id="example" class="table table-hover" style="width:100%">
     <thead>
         <tr>
             <th scope="col">#</th>

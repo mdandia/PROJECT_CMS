@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js">
 <div id='myalert'>
     <?= $this->session->flashdata('alert', true); ?>
 </div>
@@ -37,7 +38,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Harga</label>
-                        <input type="text" class="form-control" name="harga">
+                        <input type="text" class="form-control" value="Rp." name="harga">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">foto</label>
@@ -52,7 +53,7 @@
         </div>
     </div>
 </div>
-<table class="table table-hover" style="width:100%">
+<table id="example" class="table table-hover" style="width:100%">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -81,7 +82,7 @@
                     <?= $qq['nama_menu']; ?>
                 </td>
                 <td>
-                    Rp<?= $qq['harga']; ?>
+                    <?= $qq['harga']; ?>
                 </td>
                 <td>
                     <a href="<?= base_url('assets/upload/pricelist/' . $qq['foto']) ?>" target="_blank">
@@ -147,7 +148,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Harga</label>
-                                            <input type="text" class="form-control" name="harga"   value=" <?= $qq['harga']; ?>">
+                                            <input type="text" class="form-control" name="harga" value="<?= $qq['harga']; ?>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">foto</label>
