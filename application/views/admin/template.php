@@ -171,24 +171,6 @@
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                             <a href="<?= base_url('admin/auth/logout') ?>" onclick="Anda yakin logout?"
                                 class="btn btn-danger mx-3 mt-2 d-block">Logout</a>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="<?= base_url('assets/admin/') ?>src/assets/images/profile/user-1.jpg"
-                                        alt="" width="35" height="35" class="rounded-circle">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                                    aria-labelledby="drop2">
-                                    <div class="message-body">
-                                        <a href="javascript:void(0)"
-                                            class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-user fs-6"></i>
-                                            <p class="mb-0 fs-3">My Profile</p>
-                                        </a>
-                                        
-                                    </div>
-                                </div>
-                            </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -231,14 +213,14 @@
     <script>
         $('#myalert').delay('slow').slideDown('slow').delay(4000).slideUp(600);
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#example').DataTable();
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 </body>
 
 </html>

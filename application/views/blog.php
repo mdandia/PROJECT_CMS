@@ -27,6 +27,7 @@
         <div class="row">
             <div class="col-md-8 col-lg-9">
                 <div class="p-t-80 p-b-124 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
+
                     <?php foreach ($konten as $konten) { ?>
                         <!-- Block4 -->
                         <div class="blo4 p-b-63">
@@ -90,11 +91,10 @@
                             <button type="submit" class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
                         </div>
                     </form>
-                    <!-- <?php if (!empty($keyword)) { ?>
-                            <p style="color:orange"><b>Menampilkan data dengan kata kunci : "
-                                    <?= $keyword; ?>"
-                                </b></p>
-                        <?php } ?> -->
+                    <?php if (!empty($konten)) { ?>
+                        <p style="color:orange"><b>Tidak ada data dengan kata kunci : 
+                            </b></p>
+                    <?php } ?>
                     <!-- Categories -->
                     <div class="categories">
                         <h4 class="txt33 bo5-b p-b-35 p-t-58">

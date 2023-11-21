@@ -124,7 +124,7 @@
                 <a href="<?= base_url('menu/') ?>" class="txt19">Menu</a>
             </li>
             <li class="t-center m-b-13">
-                <a href="<?= base_url('menu/') ?>" class="txt19">Blog</a>
+                <a href="<?= base_url('blog/') ?>" class="txt19">Blog</a>
             </li>
             <li class="t-center m-b-13">
                 <a href="<?= base_url('gallery/') ?>" class="txt19">Gallery</a>

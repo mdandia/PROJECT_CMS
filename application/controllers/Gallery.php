@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Gallery  extends CI_Controller
+class Gallery extends CI_Controller
 {
     public function __construct()
     {
@@ -18,7 +18,8 @@ class Gallery  extends CI_Controller
 
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-
+        $this->db->from('gallery');
+		$gallery = $this->db->limit(8)->get()->result_array();
         $this->db->from('kategori');
         $kategori = $this->db->get()->result_array();
 
@@ -57,10 +58,11 @@ class Gallery  extends CI_Controller
             'konfig' => $konfig,
             'kategori' => $kategori,
             'caraousel' => $caraousel,
-            'gallery' => $this->gallery_model->allfoto($config['per_page'], $datai['start']),
-            'kategmen' => $kategmen
+            'gallery_pag' => $this->gallery_model->allfoto($config['per_page'], $datai['start']),
+            'kategmen' => $kategmen,
+            'gallery' => $gallery
         );
-        $this->template->load('templatead','gallery', array_merge($data));
+        $this->template->load('templatead', 'gallery', array_merge($data));
 
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 class gallery_model extends CI_Model
 {
     public function semua(){

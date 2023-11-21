@@ -34,7 +34,7 @@
                             <h6 class="card-subtitle mb-2 text-muted">
                                 <?= $rr['harga']; ?>
                             </h6>
-                            <p class="card-text" style="font-size: 12px;">
+                            <p class="card-text">
                                 <?= $rr['keterangan']; ?>
                             </p>
                         </div>

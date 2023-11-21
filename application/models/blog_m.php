@@ -19,7 +19,6 @@ class blog_m extends CI_Model
         $this->db->join('user', 'konten.username=user.username', 'left');
         $this->db->order_by('tanggal', 'DESC');
         return $this->db->get('konten')->result_array();
-
     }
     public function allkonten($limit, $start)
     {

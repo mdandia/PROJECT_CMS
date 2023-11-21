@@ -17,6 +17,10 @@
         align-items: center;
     }
 </style>
-<h1 class="animated-text">Welcome
+<h1 style="margin-top: 80px;font-family: monospace;font-size: 30px;">Selamat Datang di Admin Gun Restaurant
+</h1>
+<h1 style="font-family: monospace;font-size: 30px;">
     <?= $this->session->userdata['nama']; ?>
 </h1>
+<img src="<?= base_url('assets/admin/') ?>src/assets/images/logos/ppp.jpg" alt=""
+    style="margin-left: 740px;height: 250px;" />

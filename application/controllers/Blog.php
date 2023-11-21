@@ -26,14 +26,6 @@ class Blog extends CI_Controller
 		$this->db->join('user', 'konten.username=user.username', 'left');
 		$this->db->order_by('tanggal', 'DESC');
 		$rencent = $this->db->limit(4)->get()->result_array();
-        if ($this->input->post('submit')) {
-			$data['keyword'] = $this->input->post('keyword');
-			// $this->session->set_userdata('cari', $data['keyword']);
-		} else {
-			$data['keyword'] = null;
-		}
-        // $keyword = $this->input->get('keyword');
-        // $search = $this->blog_m->search($keyword);
         $config['base_url'] = 'http://[::1]/cemes/blog/index/';
         $config['total_rows'] = $this->blog_m->semuakonten();
         $config['per_page'] = 3;
@@ -66,7 +58,7 @@ class Blog extends CI_Controller
             'caraousel' => $caraousel,
             'gallery' => $gallery,
             'rencent' => $rencent,
-            'konten' => $this->blog_m->allkonten($config['per_page'], $data['start'], $data['keyword']),
+            'konten' => $this->blog_m->allkonten($config['per_page'], $data['start']),
             'list' => $list
         );
         $this->template->load('templatead','blog', array_merge($data));
@@ -85,6 +77,7 @@ class Blog extends CI_Controller
 		$this->db->join('user', 'konten.username=user.username', 'left');
 		$this->db->order_by('tanggal', 'DESC');
 		$rencent = $this->db->limit(4)->get()->result_array();
+        
         $keyword = $this->input->post('keyword');
         $hasil =  $this->blog_m->search($keyword);
         $data = array(
