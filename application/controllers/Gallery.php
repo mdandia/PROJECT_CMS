@@ -51,7 +51,6 @@ class Gallery extends CI_Controller
         $this->pagination->initialize($config);
 
         $datai['start'] = $this->uri->segment(3);
-        // $datamod['gallery_model'] = $this->gallery_model->allfoto($config['per_page'], $datai['start']);
         $data = array(
 
             'judul' => "Gallery",

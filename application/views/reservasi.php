@@ -143,35 +143,5 @@
                 </form>
             </div>
         </div>
-
-        <div class="info-reservation flex-w p-t-80">
-            <div class="size23 w-full-md p-t-40 p-r-30 p-r-0-md">
-                <h4 class="txt5 m-b-18">
-                    Reserve by Phone
-                </h4>
-
-                <p class="size25">
-                    Donec quis euismod purus. Donec feugiat ligula rhoncus, varius nisl sed, tincidunt lectus.
-                    <span class="txt25">Nulla vulputate</span>
-                    , lectus vel volutpat efficitur, orci
-                    <span class="txt25">lacus sodales</span>
-                    sem, sit amet quam:
-                    <span class="txt24">(001) 345 6889</span>
-                </p>
-            </div>
-
-            <div class="size24 w-full-md p-t-40">
-                <h4 class="txt5 m-b-18">
-                    For Event Booking
-                </h4>
-
-                <p class="size26">
-                    Donec feugiat ligula rhoncus:
-                    <span class="txt24">(001) 345 6889</span>
-                    , varius nisl sed, tinci-dunt lectus sodales sem.
-                </p>
-            </div>
-
-        </div>
     </div>
 </section>

@@ -121,9 +121,9 @@
                                                 <option value="admin" <?php if ($aa['level'] == 'admin') {
                                                     echo "selected";
                                                 } ?>>Admin</option>
-                                                <option value="siswa" <?php if ($aa['level'] == 'siswa') {
+                                                <option value="siswa" <?php if ($aa['level'] == 'user') {
                                                     echo "selected";
-                                                } ?>>Siswa</option>
+                                                } ?>>User</option>
                                             </select>
                                             <label for="floatingSelect">Level</label>
                                         </div>

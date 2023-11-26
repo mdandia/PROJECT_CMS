@@ -91,10 +91,6 @@
                             <button type="submit" class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
                         </div>
                     </form>
-                    <?php if (!empty($konten)) { ?>
-                        <p style="color:orange"><b>Tidak ada data dengan kata kunci : 
-                            </b></p>
-                    <?php } ?>
                     <!-- Categories -->
                     <div class="categories">
                         <h4 class="txt33 bo5-b p-b-35 p-t-58">
@@ -114,7 +110,7 @@
                     <!-- Most Popular -->
                     <div class="popular">
                         <h4 class="txt33 p-b-35 p-t-58">
-                            Most Rencent
+                            Rencent Post
                         </h4>
 
                         <ul>

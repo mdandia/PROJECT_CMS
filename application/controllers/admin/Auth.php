@@ -6,7 +6,7 @@ class Auth extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'judul_title' => "Login sekk",
+			'judul_title' => "Login Gun Restaurant",
 		);
 		$this->load->view('login', array_merge($data));
 	}

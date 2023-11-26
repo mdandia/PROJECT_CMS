@@ -17,12 +17,6 @@
                         <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
                             <?= $konfig->judul_website; ?>
                         </h2>
-
-                        <!-- <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
-                                <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
-                                    Look Menu
-                                </a>
-                            </div> -->
                     </div>
                 </div>
                 <?php $no++;

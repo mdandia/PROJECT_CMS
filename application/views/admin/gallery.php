@@ -11,7 +11,7 @@
                     <input type="text" class="form-control" name="judul" placeholder="judul foto">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Pilih foto dengan ukuran 1:3</label>
+                    <label class="form-label">Pilih foto</label>
                     <input type="file" class="form-control" name="foto" accept="image/png, image/gif, image/jpeg">
                 </div>
                 <div class="modal-footer">
